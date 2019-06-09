@@ -1,0 +1,6 @@
+module Pods_Epireminder {
+  umbrella header "Pods-Epireminder-umbrella.h"
+
+  export *
+  module * { export * }
+}
