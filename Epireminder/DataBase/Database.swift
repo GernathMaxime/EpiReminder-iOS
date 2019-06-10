@@ -13,6 +13,7 @@ class User: Object
     @objc dynamic var id = 1
     @objc dynamic var autoLog = ""
     @objc dynamic var email = ""
+    @objc dynamic var year = ""
 
     override static func primaryKey() -> String? {
         return "id"

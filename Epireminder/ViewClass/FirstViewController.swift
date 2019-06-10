@@ -10,7 +10,6 @@ import UIKit
 import RealmSwift
 
 class FirstViewController: UIViewController {
-
     let realm = try! Realm()
 
     override func viewDidLoad() {

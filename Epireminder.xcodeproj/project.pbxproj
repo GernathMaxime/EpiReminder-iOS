@@ -21,6 +21,7 @@
 		74B6F0A5227B25DA00C75DA0 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6F0A4227B25DA00C75DA0 /* Login.swift */; };
 		74B6F0A9227B35C400C75DA0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6F0A7227B35C400C75DA0 /* RoundButton.swift */; };
 		74B6F0AA227B35C400C75DA0 /* LDGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B6F0A8227B35C400C75DA0 /* LDGradientView.swift */; };
+		74F6090C22AD72BB00A85894 /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6090B22AD72BB00A85894 /* Profil.swift */; };
 		C564F9AB93621D1080EB3B1A /* libPods-Epireminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D124E942B0CF5BEFD10AA64 /* libPods-Epireminder.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		74B6F0A4227B25DA00C75DA0 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; usesTabs = 0; };
 		74B6F0A7227B35C400C75DA0 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		74B6F0A8227B35C400C75DA0 /* LDGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDGradientView.swift; sourceTree = "<group>"; };
+		74F6090B22AD72BB00A85894 /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
 		7D124E942B0CF5BEFD10AA64 /* libPods-Epireminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Epireminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827742B050199CB8A6DDE64D /* Pods-Epireminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epireminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epireminder/Pods-Epireminder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				743F53FD22AC5547003CFB24 /* Database.swift */,
 				743F53FF22AC5E7A003CFB24 /* Agenda.swift */,
 				743F540322AD1EA1003CFB24 /* Hub.swift */,
+				74F6090B22AD72BB00A85894 /* Profil.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				743F540422AD1EA1003CFB24 /* Hub.swift in Sources */,
 				743F53FB22AC52AB003CFB24 /* FirstViewController.swift in Sources */,
 				749FDC62227C60AC008D4CC1 /* HubViewController.swift in Sources */,
+				74F6090C22AD72BB00A85894 /* Profil.swift in Sources */,
 				74B6F0AA227B35C400C75DA0 /* LDGradientView.swift in Sources */,
 				743F53FE22AC5547003CFB24 /* Database.swift in Sources */,
 				74B6F092227B18CE00C75DA0 /* AppDelegate.swift in Sources */,

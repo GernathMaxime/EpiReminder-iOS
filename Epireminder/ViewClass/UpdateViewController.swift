@@ -18,9 +18,10 @@ class UpdateViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    @IBOutlet weak var todayButtonOutlet: UIButton!
-    @IBOutlet weak var tomorrowButtonOutlet: UIButton!
-
+    @IBAction func calendarAppButton(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "calshow://")! as URL)
+    }
+    
     @IBAction func updateAgendaButton(_ sender: Any) {
         let parameters: Parameters = [:]
         let user = realm.objects(User.self).first._rlmInferWrappedType()
@@ -34,16 +35,6 @@ class UpdateViewController: UIViewController {
                     self.updateAgenda(agenda: agenda)
                 } catch { print("fail") }
         }
-    }
-
-    @IBAction func todayButton(_ sender: Any) {
-        todayButtonOutlet.backgroundColor = UIColor(red: 49/255, green: 50/255, blue: 50/255, alpha: 1.0)
-        tomorrowButtonOutlet.backgroundColor = UIColor(red: 122/255, green: 125/255, blue: 125/255, alpha: 1.0)
-    }
-
-    @IBAction func tomorrow(_ sender: Any) {
-        todayButtonOutlet.backgroundColor = UIColor(red: 122/255, green: 125/255, blue: 125/255, alpha: 1.0)
-        tomorrowButtonOutlet.backgroundColor = UIColor(red: 49/255, green: 50/255, blue: 50/255, alpha: 1.0)
     }
 
     func updateAgenda(agenda: Agenda) {

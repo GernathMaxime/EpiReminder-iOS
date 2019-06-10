@@ -37,32 +37,24 @@ class Login: UIViewController {
             print(String(myString!.dropFirst(25)))
             let parameters: Parameters = [:]
 
-//            Alamofire.request("https://intra.epitech.eu/\(String(myString!.dropFirst(25)))/module/2018/B-INN-000/PAR-0-1/?format=json",
-//                method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
-//                .responseString { response in
-//                    do {
-//                        let hubWork : Hub = try JSONDecoder().decode(Hub.self, from: response.data!)
-//                        hubWork.activites.forEach({ (hubElem) in
-//                            hubElem.events.forEach({ (hubEvent) in
-//                                if (hubElem.title.contains("maxime.gernath@epitech.eu")) {
-//                                    print("Sharing")
-//                                    self.nbShare = self.nbShare + 1
-//                                }
-//                                if (hubEvent.userStatus == "present") {
-//                                    print(hubElem.title)
-//                                    self.nbWork = self.nbWork + 1
-//                                }
-//                            })
-//                        })
-//                    } catch { print("fail work") }
-//            }
+            Alamofire.request("https://intra.epitech.eu/\(String(myString!.dropFirst(25)))/user/?format=json",
+                method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+                .responseString { response in
+                    print(response)
+                    do {
+                        let profil : Profil = try JSONDecoder().decode(Profil.self, from: response.data!)
+                        let realm = try! Realm()
+                        
+                        print("\nSaving model in the database\n")
+                        try! realm.write {
+                            realm.create(User.self, value: ["ip": 1, "autoLog": String(myString!.dropFirst(25)), "email": profil.internalEmail, "year": profil.scolaryear], update: true)
+                        }
+                    } catch { print("fail") }
+                    
+            }
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
             self.present(viewController, animated: false, completion: nil)
-            let realm = try! Realm()
-            print("\nSaving model in the database\n")
-            try! realm.write {
-                realm.create(User.self, value: ["ip": 1, "autoLog": String(myString!.dropFirst(25))], update: true)
-            }
+            
         }
 
         // Mettre dans la base de données Realm
