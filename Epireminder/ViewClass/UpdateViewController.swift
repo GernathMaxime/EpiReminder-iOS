@@ -44,11 +44,11 @@ class UpdateViewController: UIViewController {
         switch EKEventStore.authorizationStatus(for: .event) {
         case .authorized:
             agenda.forEach({ (AgendaElement) in
-                if ("\(AgendaElement.eventRegistered)" == "string(\"registered\")") {
-                    print("\(AgendaElement.actiTitle), \(AgendaElement.room?.code ?? ""), \(AgendaElement.start) -> \(AgendaElement.end)")
+                if ("\(AgendaElement.eventRegistered!)" == "string(\"registered\")") {
+                    print("\(AgendaElement.actiTitle!), \(AgendaElement.room?.code ?? ""), \(AgendaElement.start!) -> \(AgendaElement.end!)")
                     let test = AgendaElement.room?.code!.split(separator: "/")
                     print(test!.last!)
-                    self.addToCalendar(store: eventStore, title: AgendaElement.actiTitle, room: String(test!.last!), start: AgendaElement.start, end: AgendaElement.end)
+                    self.addToCalendar(store: eventStore, title: AgendaElement.actiTitle!, room: String(test!.last!), start: AgendaElement.start!, end: AgendaElement.end!)
                 }
             })
         case .denied:
@@ -58,11 +58,11 @@ class UpdateViewController: UIViewController {
                 {[weak self] (granted: Bool, error: Error?) -> Void in
                     if granted {
                         agenda.forEach({ (AgendaElement) in
-                            if ("\(AgendaElement.eventRegistered)" == "string(\"registered\")") {
-                                print("\(AgendaElement.actiTitle), \(AgendaElement.room?.code ?? ""), \(AgendaElement.start) -> \(AgendaElement.end)")
+                            if ("\(AgendaElement.eventRegistered!)" == "string(\"registered\")") {
+                                print("\(AgendaElement.actiTitle!), \(AgendaElement.room?.code ?? ""), \(AgendaElement.start!) -> \(AgendaElement.end!)")
                                 let test = AgendaElement.room?.code!.split(separator: "/")
                                 print(test!.last!)
-                                self!.insertEvent(store: eventStore, title: AgendaElement.actiTitle, room: String(test!.last!), start: AgendaElement.start, end: AgendaElement.end)
+                                self!.insertEvent(store: eventStore, title: AgendaElement.actiTitle!, room: String(test!.last!), start: AgendaElement.start!, end: AgendaElement.end!)
                             }
                         })
                     } else {

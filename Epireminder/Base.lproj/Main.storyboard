@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="faP-RY-v6j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="faP-RY-v6j">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -273,7 +273,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crédits Hub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLd-M6-rpj">
-                                        <rect key="frame" x="100.33333333333333" y="71" width="174.33333333333337" height="42"/>
+                                        <rect key="frame" x="99.666666666666671" y="71" width="175.66666666666663" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                         <color key="textColor" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -522,6 +522,132 @@
                                             <constraint firstAttribute="height" constant="1" id="P6D-1G-gUf"/>
                                         </constraints>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-GL-8dP">
+                                        <rect key="frame" x="202.66666666666666" y="121" width="74.999999999999972" height="47"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exp + 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6E-Wl-OYI">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.40000000000000002" green="0.9882352941176471" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iCg-Xg-OKu">
+                                                <rect key="frame" x="0.0" y="17" width="75" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mup-Td-28R" customClass="RoundButton" customModule="Epireminder" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="-"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ghost" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="minExpButton:" destination="Tad-z3-cSX" eventType="touchUpInside" id="KOp-7A-ZPt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khp-QW-Z3s" customClass="RoundButton" customModule="Epireminder" customModuleProvider="target">
+                                                        <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                                        <state key="normal" title="+"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ghost" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addExpButton:" destination="Tad-z3-cSX" eventType="touchUpInside" id="6gP-sB-ZXP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="emI-pn-i8X">
+                                        <rect key="frame" x="99.666666666666686" y="121" width="75" height="47"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fruiton + 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkt-Yx-cNC">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.40000000000000002" green="0.9882352941176471" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gO5-yJ-9iL">
+                                                <rect key="frame" x="0.0" y="17" width="75" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIn-iR-XzW" customClass="RoundButton" customModule="Epireminder" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" title="-"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ghost" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="minFruitonButton:" destination="Tad-z3-cSX" eventType="touchUpInside" id="mrW-Uz-2OW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ac1-4c-7eb" customClass="RoundButton" customModule="Epireminder" customModuleProvider="target">
+                                                        <rect key="frame" x="44.999999999999986" y="0.0" width="30" height="30"/>
+                                                        <state key="normal" title="+"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                                <color key="value" red="0.30980392159999998" green="0.62745098040000002" blue="1" alpha="0.98606057359999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ghost" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addFruitonButton:" destination="Tad-z3-cSX" eventType="touchUpInside" id="2p8-Ay-0ji"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -534,6 +660,7 @@
                                     <constraint firstItem="mp5-tn-Hlg" firstAttribute="leading" secondItem="CLa-6B-j4u" secondAttribute="trailing" constant="8" id="6rv-wz-ZAr"/>
                                     <constraint firstAttribute="trailing" secondItem="mp5-tn-Hlg" secondAttribute="trailing" constant="20" id="7zB-CQ-Ab0"/>
                                     <constraint firstItem="U5X-2n-TVN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KP4-6P-Ten" secondAttribute="leading" constant="20" symbolic="YES" id="9dJ-Qm-hWY"/>
+                                    <constraint firstItem="2wH-GL-8dP" firstAttribute="top" secondItem="emI-pn-i8X" secondAttribute="top" id="FFI-Bn-4lw"/>
                                     <constraint firstItem="kLd-M6-rpj" firstAttribute="centerX" secondItem="KP4-6P-Ten" secondAttribute="centerX" id="Fxb-Kd-uGv"/>
                                     <constraint firstItem="n4x-DD-T5y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KP4-6P-Ten" secondAttribute="leading" constant="20" symbolic="YES" id="HHh-29-1Gt"/>
                                     <constraint firstAttribute="trailing" secondItem="qBq-Yv-SsM" secondAttribute="trailing" constant="181" id="HtT-gg-UIJ"/>
@@ -547,14 +674,19 @@
                                     <constraint firstItem="kht-ZW-9OA" firstAttribute="leading" secondItem="KP4-6P-Ten" secondAttribute="leading" constant="5" id="Y4G-xa-Gtk"/>
                                     <constraint firstItem="Mwl-2B-hSw" firstAttribute="leading" secondItem="KP4-6P-Ten" secondAttribute="leading" constant="5" id="YLS-NV-qfP"/>
                                     <constraint firstItem="T8r-5i-nTF" firstAttribute="leading" secondItem="sE0-43-hps" secondAttribute="trailing" constant="20" id="ZdS-z2-zwz"/>
+                                    <constraint firstItem="2wH-GL-8dP" firstAttribute="leading" secondItem="emI-pn-i8X" secondAttribute="trailing" constant="28" id="a5C-Wj-Xpo"/>
                                     <constraint firstItem="tUI-fe-Zfx" firstAttribute="top" secondItem="U5X-2n-TVN" secondAttribute="top" id="bBu-xY-IgZ"/>
                                     <constraint firstItem="sYB-tK-PjL" firstAttribute="top" secondItem="n4x-DD-T5y" secondAttribute="top" id="cjc-w9-aXO"/>
+                                    <constraint firstItem="2wH-GL-8dP" firstAttribute="bottom" secondItem="emI-pn-i8X" secondAttribute="bottom" id="cxO-fH-DCG"/>
                                     <constraint firstAttribute="bottom" secondItem="sE0-43-hps" secondAttribute="bottom" constant="28" id="dgy-nN-1MM"/>
                                     <constraint firstItem="tUI-fe-Zfx" firstAttribute="leading" secondItem="U5X-2n-TVN" secondAttribute="trailing" constant="8" id="emi-rR-wEr"/>
                                     <constraint firstItem="CLa-6B-j4u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KP4-6P-Ten" secondAttribute="leading" constant="20" symbolic="YES" id="gZX-qu-fK9"/>
                                     <constraint firstItem="sYB-tK-PjL" firstAttribute="top" secondItem="tUI-fe-Zfx" secondAttribute="bottom" constant="150" id="gvh-xt-dqg"/>
                                     <constraint firstAttribute="trailing" secondItem="Mwl-2B-hSw" secondAttribute="trailing" constant="181" id="ice-cs-fsI"/>
                                     <constraint firstItem="CLa-6B-j4u" firstAttribute="top" secondItem="bpC-Sg-lxN" secondAttribute="bottom" constant="23.670000000000002" id="jO0-Ja-B95"/>
+                                    <constraint firstItem="emI-pn-i8X" firstAttribute="top" secondItem="kLd-M6-rpj" secondAttribute="bottom" constant="8" symbolic="YES" id="ojk-xK-wwc"/>
+                                    <constraint firstItem="emI-pn-i8X" firstAttribute="leading" secondItem="kLd-M6-rpj" secondAttribute="leading" id="pkP-an-ST1"/>
+                                    <constraint firstItem="2wH-GL-8dP" firstAttribute="leading" secondItem="n4x-DD-T5y" secondAttribute="leading" id="qf9-Cj-u1c"/>
                                     <constraint firstItem="mp5-tn-Hlg" firstAttribute="top" secondItem="sYB-tK-PjL" secondAttribute="bottom" constant="150" id="st6-La-GTn"/>
                                     <constraint firstAttribute="trailing" secondItem="kht-ZW-9OA" secondAttribute="trailing" constant="181" id="tMT-tn-wbv"/>
                                     <constraint firstItem="kLd-M6-rpj" firstAttribute="top" secondItem="KP4-6P-Ten" secondAttribute="top" constant="71" id="uag-Ha-SKx"/>
@@ -598,6 +730,8 @@
                         <outlet property="Talk3" destination="M9T-s8-4HU" id="gc3-Dg-7La"/>
                         <outlet property="Talk5" destination="29k-bQ-Nxd" id="BIt-lk-MtY"/>
                         <outlet property="Talk8" destination="hT6-IT-8b3" id="38z-EV-cXQ"/>
+                        <outlet property="addExpLabel" destination="i6E-Wl-OYI" id="WLk-CR-hSY"/>
+                        <outlet property="addFruitonLabel" destination="Rkt-Yx-cNC" id="vNM-d5-yeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lh1-rm-BKk" userLabel="First Responder" sceneMemberID="firstResponder"/>

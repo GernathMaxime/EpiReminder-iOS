@@ -26,12 +26,46 @@ class HubViewController: UIViewController {
     @IBOutlet weak var Check3: UIImageView!
     @IBOutlet weak var Check5: UIImageView!
     @IBOutlet weak var Check8: UIImageView!
+    @IBOutlet weak var addFruitonLabel: UILabel!
+    @IBOutlet weak var addExpLabel: UILabel!
+    
+
+    @IBAction func minFruitonButton(_ sender: Any) {
+        nbMaker = nbMaker - 1
+        if (nbMaker < 0) {
+            nbMaker = 0
+        }
+        addFruitonLabel.text = "Fruiton + \(nbMaker)"
+        updateview()
+    }
+    @IBAction func addFruitonButton(_ sender: Any) {
+        nbMaker = nbMaker + 1
+        addFruitonLabel.text = "Fruiton + \(nbMaker)"
+        updateview()
+    }
+    @IBAction func minExpButton(_ sender: Any) {
+        addnbExp = addnbExp - 1
+        if (addnbExp < 0) {
+            addnbExp = 0
+            return
+        }
+        nbWork = nbWork - 1
+        addExpLabel.text = "Exp + \(addnbExp)"
+        updateview()
+    }
+    @IBAction func addExpButton(_ sender: Any) {
+        addnbExp = addnbExp + 1
+        nbWork = nbWork + 1
+        addExpLabel.text = "Exp + \(addnbExp)"
+        updateview()
+    }
     
     let realm = try! Realm()
     var nbTalk = 0
     var nbWork = 0
     var nbShare = 0
     var nbMaker = 0
+    var addnbExp = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +95,7 @@ class HubViewController: UIViewController {
                     })
                 } catch { print("fail work") }
         }
-        
+
         Alamofire.request("https://intra.epitech.eu/\(user.autoLog)/module/2018/B-INN-001/PAR-0-1/?format=json",
             method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .responseString { response in
@@ -87,9 +121,9 @@ class HubViewController: UIViewController {
         Exp3.text = "\(nbWork)/3"
         Exp5.text = "\(nbWork)/3"
         Exp8.text = "\(nbWork)/3"
-        Fruit3.text = "0/1"
-        Fruit3.text = "0/1"
-        Fruit8.text = "0/2"
+        Fruit3.text = "\(nbMaker)/1"
+        Fruit5.text = "\(nbMaker)/1"
+        Fruit8.text = "\(nbMaker)/2"
         Sharing5.text = "\(nbShare)/1"
         Sharing8.text = "\(nbShare)/2"
         if (nbTalk >= 4 && nbWork >= 3 && nbMaker >= 1) {
