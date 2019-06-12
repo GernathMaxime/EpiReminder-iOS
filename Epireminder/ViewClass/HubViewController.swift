@@ -103,6 +103,10 @@ class HubViewController: UIViewController {
                     let hubTalk : Hub = try JSONDecoder().decode(Hub.self, from: response.data!)
                     hubTalk.activites.forEach({ (hubElem) in
                         hubElem.events.forEach({ (hubEvent) in
+                            if (hubElem.title.contains(user.email)) {
+                                print("Sharing")
+                                self.nbShare = self.nbShare + 1
+                            }
                             if (hubEvent.userStatus == "present") {
                                 print(hubElem.title)
                                 self.nbTalk = self.nbTalk + 1
@@ -134,6 +138,15 @@ class HubViewController: UIViewController {
         }
         if (nbTalk >= 4 && nbWork >= 3 && nbShare >= 2 && nbMaker >= 2) {
             Check8.alpha = 100
+        }
+        if (nbTalk < 4 || nbWork < 3 || nbMaker < 1) {
+            Check3.alpha = 0
+        }
+        if (nbTalk < 4 || nbWork < 3 || nbShare < 1 || nbMaker < 1) {
+            Check5.alpha = 0
+        }
+        if (nbTalk < 4 || nbWork < 3 || nbShare < 2 || nbMaker < 2) {
+            Check8.alpha = 0
         }
     }
 }
